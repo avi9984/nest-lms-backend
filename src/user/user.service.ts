@@ -38,4 +38,8 @@ export class UserService {
         }
         // const checkPassowrd= await this.JwtService
     }
+
+    async getUserById(id: string) {
+        return await this.userModel.findOne({ _id: id })
+    }
 }
